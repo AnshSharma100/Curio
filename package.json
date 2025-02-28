@@ -1,13 +1,19 @@
 {
   "name": "curio-web-app",
   "version": "1.0.0",
-  "description": "",
+  "description": "Healthcare-focused web app designed to assist elderly users with medical-related inquiries",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm run build --prefix client"
   },
-  "keywords": [],
+  "keywords": ["healthcare", "elderly", "ai", "diagnosis", "medical"],
   "author": "",
   "license": "ISC",
-  "type": "commonjs"
+  "devDependencies": {
+    "concurrently": "^8.2.0"
+  }
 }
